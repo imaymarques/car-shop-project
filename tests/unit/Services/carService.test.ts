@@ -12,20 +12,20 @@ describe('Testa a camada Service na rota cars', function () {
     sinon.stub(Model, 'find').resolves(carsMock);
     const carService = new CarService();
     const response = await carService.getAllCars();
-    expect(response).to.be.equal(carsMock);
+    expect(response).to.be.deep.equal(carsMock);
   });
   it('Verifica se retorna um carro pelo seu id', async function () {
     sinon.stub(Model, 'findById').resolves(responseMock);
     const id = '63ecbe47391f8ac20be1f9c4';
     const carService = new CarService();
     const response = await carService.getCarById(id);
-    expect(response).to.be.equal(responseMock);
+    expect(response).to.be.deep.equal(responseMock);
   });
   it('Verifica se retorna um erro digitando um id inválido', async function () {
     sinon.stub(Model, 'findById').resolves(null);
     const id = '46dfd';
     const carService = new CarService();
     const response = await carService.getCarById(id);
-    expect(response).to.be.equal('Car not found');
+    expect(response).to.be.deep.equal('Car not found');
   });
 });
