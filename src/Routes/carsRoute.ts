@@ -6,5 +6,6 @@ const route = Router();
 route.post('/', (req, res, next) => new CarsController(req, res, next).addCar());
 route.get('/', (req, res, next) => new CarsController(req, res, next).getAllCars());
 route.get('/:id', (req, res, next) => new CarsController(req, res, next).getCarById());
+route.put('/:id', (req, res, next) => new CarsController(req, res, next).updateById());
 
 export default route;
