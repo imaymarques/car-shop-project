@@ -5,6 +5,7 @@ export const newCarMock = {
   status: true,
   buyValue: 15.990,
   doorsQty: 4,
+  id: '63eab41ce33423ed43c28cc5',
   seatsQty: 5,
 };
 
