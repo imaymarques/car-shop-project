@@ -17,15 +17,23 @@ class MotorcycleService {
 
     return this.addMotorcycle(newMotocycle);
   }
+
   public async findAll() {
     const response = await this.modelMotorcycle.findAll();    
     const result = response.map((motorcycle) => this.addMotorcycle(motorcycle));
 
     return result;
   }
+
   public async findById(id: string) {
     const findId = await this.modelMotorcycle.findById(id);
     return this.addMotorcycle(findId as IMotorcycle);
+  }
+
+  public async updateById(id: string, motorcycle: IMotorcycle) {
+    const updateCar = await this.modelMotorcycle.updateById(id, motorcycle);
+
+    return this.addMotorcycle(updateCar as IMotorcycle);
   }
 }
 
