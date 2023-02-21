@@ -17,7 +17,9 @@ Consulta de veículos: É possível realizar consultas aos veículos cadastrados
 ### Tecnologias Utilizadas
 
 TypeScript: Plataforma utilizada para desenvolver a aplicação.
+
 MongoDB: Banco de dados utilizado para armazenar as informações dos veículos.
+
 Mongoose: Biblioteca utilizada para interagir com o MongoDB e definir os modelos de objetos.
 
 ### Considerações Finais
